@@ -24,6 +24,6 @@ class DefaultController extends Controller
      */
     public function helloAction($name)
     {
-        return Response::create(sprintf('Hello %s', $name));
+        return Response::create(sprintf('%s Hello %s', date('d.m.Y H:i:s'), $name));
     }
 }
