@@ -3,5 +3,6 @@
 {% block body %}
     {{ 'now'|date('d.m.Y H:i:s') }}
 
-    {{ render_esi('world') }}
+    {{ render_esi('/world') }}
+    <esi:include src="http://www.google.de/" />
 {% endblock %}
