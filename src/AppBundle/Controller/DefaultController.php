@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
@@ -14,7 +15,15 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-
+        sleep(10);
         return $this->render('default/index.html.twig');
+    }
+
+    /**
+     * @Route("/{name}")
+     */
+    public function helloAction($name)
+    {
+        return Response::create(sprintf('Hello %s', $name));
     }
 }
