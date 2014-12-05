@@ -10,7 +10,7 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/", name="homepage")
-     * @Cache(smaxage="3600")
+     * @Cache(expires="+ 1 hour")
      */
     public function indexAction()
     {
